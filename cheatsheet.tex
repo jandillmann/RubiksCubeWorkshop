@@ -1,0 +1,97 @@
+\documentclass[a4paper,oneside,11pt]{scrartcl}
+
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[bookmarksopen]{hyperref}
+\usepackage[dvips]{color}
+\usepackage{lmodern}
+\usepackage{scrpage2}
+
+\newcommand{\titel}{Rubik's Cube-Workshop Cheat Sheet}
+\newcommand{\autor}{Jan Dillmann (\href{http://www.jandillmann.de}{www.jandillmann.de})}
+\newcommand{\datum}{\today}
+
+\newcommand{\grad}{$^\circ$}
+
+% Serifenlose Schrift
+\renewcommand{\familydefault}{\sfdefault}
+% kein Absatzeinzug
+\setlength{\parindent}{0mm}
+% keine Seitenzahlen
+\clearscrplain
+\pagestyle{scrplain}
+
+\hypersetup{%
+	pdftitle={\titel},%
+	pdfauthor={\autor},%
+	colorlinks=true,%
+	linkcolor=black,%
+	urlcolor=black
+}
+
+\title{\titel}
+\author{\autor}
+\date{\datum}
+
+
+\begin{document}
+\maketitle
+
+\section*{Seiten} % (fold)
+\label{sec:seiten}
+
+\textbf{\underline{U}}p,
+\textbf{\underline{D}}own,
+\textbf{\underline{L}}eft,
+\textbf{\underline{R}}ight,
+\textbf{\underline{F}}ront,
+\textbf{\underline{B}}ack
+
+% section seiten (end)
+
+\section*{Notation} % (fold)
+\label{sec:notation}
+
+$R^{-1}D^{-1}RD \,\Rightarrow$ \glqq Right inverted, down inverted, right, down\grqq \\\glqq Rechte Seite um 90\grad{} gegen den Uhrzeigersinn drehen, untere Seite um 90\grad{} gegen den Uhrzeigersinn drehen, rechte Seite um 90\grad{} im Uhrzeigersinn drehen, untere Seite um 90\grad{} im Uhrzeigersinn drehen.\grqq
+
+% section notation (end)
+
+\section*{Algorithmen} % (fold)
+\label{sec:algorithmen}
+
+\subsubsection*{Ebene 1} % (fold)
+\label{ssub:ebene_1}
+
+\begin{description}
+	\item[Kanten drehen] $F^{-1}UL^{-1}U^{-1}$
+	\item[Ecken positionieren] $R^{-1}D^{-1}RD$
+\end{description}
+
+% subsubsection ebene_1 (end)
+
+\subsubsection*{Ebene 2} % (fold)
+\label{ssub:ebene_2}
+
+\begin{description}
+	\item[Kante nach rechts kippen] $URU^{-1}R^{-1}U^{-1}F^{-1}UF$
+	\item[Kante nach links kippen] $U^{-1}L^{-1}ULUFU^{-1}F^{-1}$
+\end{description}
+
+% subsubsection ebene_2 (end)
+
+\subsubsection*{Ebene 3} % (fold)
+\label{ssub:ebene_3}
+
+\begin{description}
+	\item[Kreuz auf der Oberseite] $FRUR^{-1}U^{-1}F^{-1}$
+	\item[Mittelstücke der Kanten positionieren] $RUR^{-1}URU^2R^{-1}U$
+	\item[Ecken an die richtige Stelle bringen] $URU^{-1}L^{-1}UR^{-1}U^{-1}L$
+	\item[Ecken positionieren] $R^{-1}D^{-1}RD$
+\end{description}
+
+% subsubsection ebene_3 (end)
+
+% section algorithmen (end)
+
+\end{document}
